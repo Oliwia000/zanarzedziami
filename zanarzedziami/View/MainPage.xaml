@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zanardzediami.View.MainPage"
+             Title="Lista Narzędzi">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Dodaj" Clicked="AddTool" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="10">
+        <Label Text="Lista dostępnych narzędzi" FontSize="Large" HorizontalOptions="Center" />
+
+        <ListView x:Name="ToolsListView" 
+                  ItemsSource="{Binding Tools}" 
+                  SelectedItem="{Binding SelectedTool}"
+                  SelectionChanged="ToolSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Label Text="{Binding Name}" FontSize="Medium" />
+                            <Label Text="{Binding Quantity}" FontSize="Medium" HorizontalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Wyświetl pierwsze narzędzie" Clicked="ShowSingleTool" />
+    </StackLayout>
+</ContentPage>
