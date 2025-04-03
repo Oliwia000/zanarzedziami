@@ -1,4 +1,5 @@
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Xaml;
 using zanardzediami.Model;
 using zanarzedziami.ViewModel;
 
@@ -25,3 +26,9 @@ namespace zanardzediami.View
         
     }
 }
+
+
+
+
+
+     
