@@ -1,8 +1,8 @@
 ﻿using Microsoft.Maui.Controls;
 using zanarzedziami.ViewModel;
-using zanardzediami.Model;
+using zanarzedziami.Model;
 
-namespace zanardzediami.View
+namespace zanarzedziami.View
 {
     public partial class MainPage : ContentPage
     {

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="zanardzediami.View.AddToolPage"
+             x:Class="zanarzedziami.View.AddToolPage"
              Title="Dodaj narzędzie">
+    
     <StackLayout Padding="20" Spacing="10">
         <Label Text="Nazwa narzędzia:" />
         <Entry x:Name="NameEntry" Text="{Binding Name}" Placeholder="Wpisz nazwę" />

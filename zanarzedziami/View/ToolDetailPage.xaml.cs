@@ -1,9 +1,9 @@
 using Microsoft.Maui.Controls;
-using zanardzediami.Model;
+using zanarzedziami.Model;
 using Microsoft.Maui.Controls.Xaml;
 using zanarzedziami.ViewModel;
 
-namespace zanardzediami.View
+namespace zanarzedziami.View
 {
     public partial class ToolDetailPage : ContentPage
     {
