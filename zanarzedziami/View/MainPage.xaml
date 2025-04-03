@@ -3,12 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="zanarzedziami.View.MainPage"
              Title="Lista Narzędzi">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Dodaj" Clicked="AddTool" />
-    </ContentPage.ToolbarItems>
-
+    
+    
+   
     <StackLayout Padding="10">
-        <Label Text="Lista  narzędzi" FontSize="Large" HorizontalOptions="Center" />
+        <Label Text="Lista narzędzi" FontSize="Large" HorizontalOptions="Start"  Margin="10"/>
+        
+        <Button Text="Dodaj narzędzie" Clicked="AddTool"  Margin="10"/>
+
+        <Button Text="Wyświetl pojedyncze narzędzie" Clicked="ShowSingleTool"  Margin="10"/>
 
         <ListView x:Name="ToolsListView" 
            ItemsSource="{Binding Tools}" 
@@ -26,7 +29,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button Text="Wyświetl pojedyncze narzędzie" Clicked="ShowSingleTool" />
+        
     </StackLayout>
 </ContentPage>
 
