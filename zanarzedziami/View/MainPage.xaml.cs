@@ -1,6 +1,7 @@
 ﻿using Microsoft.Maui.Controls;
 using zanarzedziami.ViewModel;
 using zanarzedziami.Model;
+using zanarzedziami.Service;
 
 namespace zanarzedziami.View
 {

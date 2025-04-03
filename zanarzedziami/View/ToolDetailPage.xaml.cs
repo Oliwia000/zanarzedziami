@@ -2,6 +2,7 @@ using Microsoft.Maui.Controls;
 using zanarzedziami.Model;
 using Microsoft.Maui.Controls.Xaml;
 using zanarzedziami.ViewModel;
+using zanarzedziami.Service;    
 
 namespace zanarzedziami.View
 {

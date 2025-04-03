@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Text.Json;
 using zanarzedziami.Model;
+using zanarzedziami.Service;
 using System.Collections.ObjectModel;
 
 namespace zanarzedziami.ViewModel
