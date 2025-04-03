@@ -8,7 +8,7 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout Padding="10">
-        <Label Text="Lista dostępnych narzędzi" FontSize="Large" HorizontalOptions="Center" />
+        <Label Text="Lista  narzędzi" FontSize="Large" HorizontalOptions="Center" />
 
         <ListView x:Name="ToolsListView" 
            ItemsSource="{Binding Tools}" 
