@@ -22,5 +22,6 @@ namespace zanardzediami.View
             viewModel.AddTool(newTool);
             await Navigation.PopAsync();
         }
+        
     }
 }

@@ -36,5 +36,8 @@ namespace zanardzediami.View
                 Navigation.PushAsync(new ToolDetailPage(firstTool, viewModel));
             }
         }
+           
+       
     }
-}
+    }
+

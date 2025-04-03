@@ -36,5 +36,8 @@ namespace zanardzediami.View
                 await Navigation.PopAsync();
             }
         }
+       
     }
 }
+
+

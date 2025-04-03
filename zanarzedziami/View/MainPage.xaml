@@ -11,9 +11,9 @@
         <Label Text="Lista dostępnych narzędzi" FontSize="Large" HorizontalOptions="Center" />
 
         <ListView x:Name="ToolsListView" 
-                  ItemsSource="{Binding Tools}" 
-                  SelectedItem="{Binding SelectedTool}"
-                  SelectionChanged="ToolSelected">
+           ItemsSource="{Binding Tools}" 
+           SelectedItem="{Binding SelectedTool}"
+           ItemSelected="ToolSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -29,3 +29,12 @@
         <Button Text="Wyświetl pierwsze narzędzie" Clicked="ShowSingleTool" />
     </StackLayout>
 </ContentPage>
+
+
+
+
+   
+
+       
+
+      
