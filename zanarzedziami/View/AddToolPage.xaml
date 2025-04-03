@@ -11,6 +11,6 @@
         <Entry x:Name="QuantityEntry" Text="{Binding Quantity}" Keyboard="Numeric" Placeholder="Wpisz ilość" />
         <Label Text="Cena:" />
         <Entry x:Name="PriceEntry" Text="{Binding Price}" Keyboard="Numeric" Placeholder="Wpisz cenę" />
-        <Button Text="Dodaj narzędzie" Clicked="SaveTool" BackgroundColor="GreenYellow" TextColor="White" />
+        <Button Text="Dodaj narzędzie" Clicked="SaveTool" BackgroundColor="GreenYellow" TextColor="Red" />
     </StackLayout>
 </ContentPage>

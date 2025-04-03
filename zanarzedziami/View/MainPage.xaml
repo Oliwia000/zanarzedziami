@@ -26,7 +26,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button Text="Wyświetl pierwsze narzędzie" Clicked="ShowSingleTool" />
+        <Button Text="Wyświetl pojedyncze narzędzie" Clicked="ShowSingleTool" />
     </StackLayout>
 </ContentPage>
 
