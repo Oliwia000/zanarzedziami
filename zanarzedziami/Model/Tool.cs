@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using zanarzedziami.Service;
 using System.Threading.Tasks;
 
 namespace zanarzedziami.Model
