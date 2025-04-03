@@ -9,7 +9,7 @@
     <StackLayout Padding="10">
         <Label Text="Lista narzędzi" FontSize="Large" HorizontalOptions="Start"  Margin="10"/>
         
-        <Button Text="Dodaj narzędzie" Clicked="AddTool"  Margin="10"/>
+        <Button Text="Dodaj narzędzie" Clicked="AddTool"  Margin="10" BackgroundColor="CadetBlue"/>
 
         <Button Text="Wyświetl pojedyncze narzędzie" Clicked="ShowSingleTool"  Margin="10"/>
 

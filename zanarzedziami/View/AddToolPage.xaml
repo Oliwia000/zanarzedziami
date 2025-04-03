@@ -9,7 +9,7 @@
         <Entry x:Name="NameEntry" Text="{Binding Name}" Placeholder="Wpisz nazwę" />
         <Label Text="Ilość:" />
         <Entry x:Name="QuantityEntry" Text="{Binding Quantity}" Keyboard="Numeric" Placeholder="Wpisz ilość" />
-        <Label Text="Cena:" />
+        <Label Text="Cena w zł:" />
         <Entry x:Name="PriceEntry" Text="{Binding Price}" Keyboard="Numeric" Placeholder="Wpisz cenę" />
         <Button Text="Zapisz narzędzie" Clicked="SaveTool" BackgroundColor="GreenYellow" TextColor="Red" />
     </StackLayout>
