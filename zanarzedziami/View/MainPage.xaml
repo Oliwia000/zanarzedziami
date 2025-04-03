@@ -14,8 +14,7 @@
         <Button Text="Wyświetl pojedyncze narzędzie" Clicked="ShowSingleTool"  Margin="10"/>
         
         <Button Text="Aktualizuj narzędzie" Clicked=""  Margin="10" BackgroundColor="LightBlue"/>
-        
-        <Button Text="Wyświetl wszystkie narzędzia" Clicked=""  Margin="10" BackgroundColor="SkyBlue"/>
+      
 
 
         <ListView x:Name="ToolsListView" 

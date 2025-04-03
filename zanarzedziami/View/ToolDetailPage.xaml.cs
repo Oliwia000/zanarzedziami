@@ -43,10 +43,10 @@ namespace zanarzedziami.View
 }
 
 
+//SkyBlue-kolor
 
 
 
-      
 
-     
+
 
