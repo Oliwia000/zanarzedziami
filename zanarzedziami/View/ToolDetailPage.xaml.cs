@@ -2,7 +2,8 @@ using Microsoft.Maui.Controls;
 using zanarzedziami.Model;
 using Microsoft.Maui.Controls.Xaml;
 using zanarzedziami.ViewModel;
-using zanarzedziami.Service;    
+using zanarzedziami.Service;
+using zanarzedziami.ViewModel;
 
 namespace zanarzedziami.View
 {
@@ -21,26 +22,26 @@ namespace zanarzedziami.View
 
         private async void DeleteTool(object sender, EventArgs e)
         {
-            bool confirmed = await DisplayAlert("Potwierdzenie", "Czy na pewno chcesz usun¹æ to narzêdzie?", "Tak", "Nie");
-            if (confirmed)
+            bool confirm = await DisplayAlert("Potwierdzenie", "Na pewno usun¹æ?", "Tak", "Nie");
+            if (confirm)
             {
-                viewModel.DeleteTool(tool);
+                await viewModel.DeleteToolAsync(tool);
                 await Navigation.PopAsync();
             }
         }
 
         private async void UpdateTool(object sender, EventArgs e)
         {
-            bool confirmed = await DisplayAlert("Potwierdzenie", "Czy na pewno chcesz zaktualizowaæ to narzêdzie?", "Tak", "Nie");
-            if (confirmed)
+            bool confirm = await DisplayAlert("Potwierdzenie", "Zaktualizowaæ narzêdzie?", "Tak", "Nie");
+            if (confirm)
             {
-                viewModel.UpdateTool(tool);
+                await viewModel.UpdateToolAsync(tool);
                 await Navigation.PopAsync();
             }
         }
-       
     }
 }
+
 
 
 //SkyBlue-kolor

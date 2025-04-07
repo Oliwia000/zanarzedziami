@@ -2,7 +2,7 @@ using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Xaml;
 using zanarzedziami.Model;
 using zanarzedziami.ViewModel;
-using zanarzedziami.Service;    
+using zanarzedziami.Service;
 
 namespace zanarzedziami.View
 {
@@ -21,10 +21,9 @@ namespace zanarzedziami.View
 
         private async void SaveTool(object sender, EventArgs e)
         {
-            viewModel.AddTool(newTool);
+            await viewModel.AddToolAsync(newTool);
             await Navigation.PopAsync();
         }
-        
     }
 }
 
@@ -32,4 +31,5 @@ namespace zanarzedziami.View
 
 
 
-     
+
+

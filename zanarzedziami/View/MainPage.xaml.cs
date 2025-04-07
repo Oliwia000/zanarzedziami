@@ -1,44 +1,22 @@
 ﻿using Microsoft.Maui.Controls;
 using zanarzedziami.ViewModel;
-using zanarzedziami.Model;
-using zanarzedziami.Service;
+
+
 
 namespace zanarzedziami.View
 {
     public partial class MainPage : ContentPage
     {
-        private ToolViewModel viewModel;
-
         public MainPage()
         {
             InitializeComponent();
-            viewModel = new ToolViewModel();
-            BindingContext = viewModel;
+            BindingContext = new MainViewModel(Navigation);
         }
 
-        private void AddTool(object sender, EventArgs e)
+        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Navigation.PushAsync(new AddToolPage(viewModel));
+            var viewModel = BindingContext as MainViewModel;
+            viewModel?.ToolTappedCommand.Execute(null);
         }
-
-        private void ToolSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem is Tool selectedTool)
-            {
-                Navigation.PushAsync(new ToolDetailPage(selectedTool, viewModel));
-            }
-        }
-
-        private void ShowSingleTool(object sender, EventArgs e)
-        {
-            if (viewModel.Tools.Any())
-            {
-                Tool firstTool = viewModel.Tools.First();
-                Navigation.PushAsync(new ToolDetailPage(firstTool, viewModel));
-            }
-        }
-           
-       
     }
-    }
-
+}

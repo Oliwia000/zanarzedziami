@@ -3,44 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="zanarzedziami.View.MainPage"
              Title="Lista Narzędzi">
-    
-    
-   
+
     <StackLayout Padding="10">
-        <Label Text="Lista narzędzi" FontSize="Large" HorizontalOptions="Start"  Margin="10"/>
-        
-        <Button Text="Dodaj narzędzie" Clicked="AddTool"  Margin="10" BackgroundColor="CadetBlue"/>
+        <Label Text="Lista narzędzi" FontSize="Large" Margin="10"/>
 
-        <Button Text="Wyświetl pojedyncze narzędzie" Clicked="ShowSingleTool"  Margin="10"/>
-        
-        <Button Text="Aktualizuj narzędzie" Clicked=""  Margin="10" BackgroundColor="LightBlue"/>
-      
+        <Button Text="Dodaj narzędzie"
+                Command="{Binding AddToolCommand}"
+                BackgroundColor="CadetBlue"
+                Margin="10"/>
 
-
-        <ListView x:Name="ToolsListView" 
-           ItemsSource="{Binding Tools}" 
-           SelectedItem="{Binding SelectedTool}"
-           ItemSelected="ToolSelected">
+        <ListView ItemsSource="{Binding Tools}"
+                  SelectedItem="{Binding SelectedTool, Mode=TwoWay}"
+                  ItemSelected="OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="10">
                             <Label Text="{Binding Name}" FontSize="Medium" />
-                            <Label Text="{Binding Quantity}" FontSize="Medium" HorizontalOptions="EndAndExpand" />
+                            <Label Text="{Binding Quantity}" FontSize="Medium"
+                                   HorizontalOptions="EndAndExpand" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
-        
     </StackLayout>
 </ContentPage>
-
-
-
-
-   
-
-
-
