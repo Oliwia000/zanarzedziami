@@ -30,6 +30,11 @@ namespace zanarzedziami.ViewModel
             await _fileService.LoadToolsAsync();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tool"></param>
+        /// <returns></returns>
         public async Task AddToolAsync(Tool tool)
         {
             tool.Id = Tools.Count > 0 ? Tools.Max(t => t.Id) + 1 : 1;
@@ -37,6 +42,12 @@ namespace zanarzedziami.ViewModel
             await _fileService.SaveToolsAsync();
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tool"></param>
+        /// <returns></returns>
         public async Task UpdateToolAsync(Tool tool)
         {
             var existingTool = Tools.FirstOrDefault(t => t.Id == tool.Id);
@@ -49,7 +60,12 @@ namespace zanarzedziami.ViewModel
             }
         }
 
-        public async Task DeleteToolAsync(Tool tool)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tool"></param>
+        /// <returns></returns>
+                public async Task DeleteToolAsync(Tool tool)
         {
             Tools.Remove(tool);
             await _fileService.SaveToolsAsync();
