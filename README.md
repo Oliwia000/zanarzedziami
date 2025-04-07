@@ -10,6 +10,9 @@
      Okno z szczegółami wybranego narzędzia
    ![4](https://github.com/user-attachments/assets/332b2a35-d3b7-4c64-b245-ed5007ff531c)
 
+   ![1](https://github.com/user-attachments/assets/e00a04fa-336b-4dde-932f-d950e1bb11f3)
+
+
      Wymagane potwierdzenie od użytkownika o aktualizacji narzędzia 
    ![5](https://github.com/user-attachments/assets/8cd969d5-fbbb-49ad-92de-079508997ce0)
 
