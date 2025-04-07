@@ -14,7 +14,7 @@
         <Label Text="Cena:" FontSize="Medium" />
         <Entry x:Name="PriceEntry" Text="{Binding Price}" Keyboard="Numeric" />
 
-        <Button Text="Zaktualizuj" Clicked="UpdateTool" BackgroundColor="Blue" TextColor="White" />
-        <Button Text="Usuń" Clicked="DeleteTool" BackgroundColor="Red" TextColor="White" />
+        <Button Text="Zaktualizuj" Clicked="UpdateTool" BackgroundColor="#4fbbc9" TextColor="White" />
+        <Button Text="Usuń" Clicked="DeleteTool" BackgroundColor="#ff0000" TextColor="White" />
     </StackLayout>
 </ContentPage>
