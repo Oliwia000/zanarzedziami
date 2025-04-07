@@ -20,6 +20,10 @@ namespace zanarzedziami.ViewModel
         public ObservableCollection<Tool> Tools => _fileService.Tools;
         public Tool SelectedTool { get; set; }
 
+        /// <summary>
+        /// widok modelu narzędzi, który przyjmuje serwis plików.
+        /// </summary>
+        /// <param name="fileService">Serwis plików do obsługi zapisu i odczytu narzędzi.</param>
         public ToolViewModel(FileService fileService)
         {
             _fileService = fileService;
@@ -31,10 +35,9 @@ namespace zanarzedziami.ViewModel
         }
 
         /// <summary>
-        /// 
+        /// Dodaje nowe narzędzie do kolekcji narzędzi i zapisuje zmiany w pliku.
         /// </summary>
-        /// <param name="tool"></param>
-        /// <returns></returns>
+        /// <param name="tool">Obiekt narzędzia, który ma zostać dodany.</param>
         public async Task AddToolAsync(Tool tool)
         {
             tool.Id = Tools.Count > 0 ? Tools.Max(t => t.Id) + 1 : 1;
@@ -44,31 +47,29 @@ namespace zanarzedziami.ViewModel
 
 
         /// <summary>
-        /// 
+        /// Aktualizuje istniejące narzędzie w kolekcji i zapisuje zmiany w pliku.
         /// </summary>
-        /// <param name="tool"></param>
-        /// <returns></returns>
+        /// <param name="tool">Obiekt narzędzia, który ma zostać zaktualizowany</param>
         public async Task UpdateToolAsync(Tool tool)
         {
-            var existingTool = Tools.FirstOrDefault(t => t.Id == tool.Id);
+            var existingTool = Tools.FirstOrDefault(t => t.Id == tool.Id); // Szukanie narzędzia o tym samym identyfikatorze.
             if (existingTool != null)
             {
                 existingTool.Name = tool.Name;
                 existingTool.Quantity = tool.Quantity;
                 existingTool.Price = tool.Price;
-                await _fileService.SaveToolsAsync();
+                await _fileService.SaveToolsAsync(); // Zapisanie zmienionych danych
             }
         }
 
         /// <summary>
-        /// 
+        /// Usuwa narzędzie z kolekcji i zapisuje zmiany w pliku.
         /// </summary>
-        /// <param name="tool"></param>
-        /// <returns></returns>
-                public async Task DeleteToolAsync(Tool tool)
+        /// <param name="tool">Obiekt narzędzia, które ma zostać usunięte.</param>
+        public async Task DeleteToolAsync(Tool tool)
         {
-            Tools.Remove(tool);
-            await _fileService.SaveToolsAsync();
+            Tools.Remove(tool); // Usunięcie narzędzia z kolekcji
+            await _fileService.SaveToolsAsync();   // Zapisanie zmienionej kolekcji narzędzi
         }
     }
 }
